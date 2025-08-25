@@ -100,8 +100,7 @@ python main.py
   - core/llm.py 使用 langchain-openai ChatOpenAI 接口，读取 config.yaml 的模型配置
   - 可以根据自己的api设置其他接口
 
-## 常见问题与提示
-- LanceDB 向量检索依赖 Ollama 的 bge-m3，请确保服务可用且模型已就绪
-- PDF 必须能正确解析目录（outline）；无目录的 PDF 将难以切分
-- config.yaml 中的 API Key 仅示意，开源前请移除敏感信息，使用本地私有配置
-- arxiv 下载失败会自动重试；.arxivCache 为 PDF 缓存目录
+## 数据库
+- 基于lancedb
+- 数据采集自arxiv中cs.AI，2025.02～2025.08期间大模型相关的论文（不一定全）
+- 链接: https://pan.baidu.com/s/197Nl3-G7niLcaHLhXQ0gzA?pwd=hajc 提取码: hajc
