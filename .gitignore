@@ -1,0 +1,30 @@
+# Python caches and environments
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.so
+*.egg-info/
+.eggs/
+.venv/
+venv/
+.env
+.env.*
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Project data & runtime artifacts
+.arxivCache/
+!/.arxivCache/.gitkeep
+
+taskDir/*
+!/taskDir/.gitkeep
+!/taskDir/如何评估一个RAG系统20250825201008/**
+
+arxivDB/
+!/arxivDB/.gitkeep
+
+

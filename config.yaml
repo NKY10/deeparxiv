@@ -1,0 +1,37 @@
+models:  
+  default:
+    model_name: Qwen/Qwen2.5-72B-Instruct
+    api_key: 
+    base_url: https://api-inference.modelscope.cn/v1
+
+  qwen:
+    model_name: Qwen/Qwen3-235B-A22B-Instruct-2507
+    api_key: 
+    base_url: https://api-inference.modelscope.cn/v1
+
+  silconflow:
+    model_name: Qwen/Qwen3-235B-A22B
+    api_key: 
+    base_url: https://api.siliconflow.cn/v1
+
+agents:
+  retrivalAgent: 
+    type: qwen
+    temperature: 0
+
+  planAgent:
+    type: qwen
+    temperature: 0.7
+
+  writeAgent:
+    type: qwen
+    temperature: 0
+cache_dir: .arxivCache
+task_dir: ./taskDir
+lancedb:
+  db_uri: ./arxivDB
+  table: arxiv
+graph:
+  recursion_limit: 25
+retrieval:
+  top_k: 15
