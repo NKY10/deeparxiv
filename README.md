@@ -49,7 +49,6 @@ pip install -r requirements.txt
 
 4) 准备 LanceDB 数据库
 - 本项目默认从 LanceDB 检索论文数据（title、pdf_link、abstract、summary、date 等）。
-- 你需要事先将论文元数据与摘要写入 LanceDB；示例（交互式 Python）：
 ```
 from core.arxivLance import arxivSql
 mdb = arxivSql(db_uri="arxivDB")
