@@ -1,0 +1,129 @@
+[
+    {
+        "reason": "引言部分需要明确综述的主题背景、研究意义以及整体结构安排，为后续章节奠定基础。",
+        "task": "## 1 引言",
+        "prompt": "**【子任务的深层解读】** 本节旨在构建综述的逻辑起点，阐明‘如何评估一个RAG系统’这一主题的学术与实践价值。需结合多篇文献摘要中提到的RAG系统复杂性、评估挑战及现实需求（如行业应用、可解释性、可信度等），说明系统性评估框架的必要性。同时应指出当前评估方法碎片化、缺乏统一标准的问题，突出本综述的整合意义。\n\n**【需要完成的内容】** 概述RAG系统的架构特点（检索+生成），指出其多组件协同带来的评估难度；总结现有评估工作的局限（如仅关注性能分数、忽略可解释性与行动指导）；引出本文综述的组织结构与核心目标——构建一个系统性的RAG评估学术框架。\n\n**【在整个全任务中的定位】** 作为综述的开篇，承担主题确立、问题提出和结构预告的功能，引导读者理解后续各章节的逻辑脉络。\n\n**【规范的markdown格式标题（含编号）说明】** 必须使用‘## 1 引言’作为一级标题，采用阿拉伯数字编号，标题为名词短语，符合层级一致性要求。",
+        "content_index": {
+            "RAGBench: Explainable Benchmark for Retrieval-Augmented Generation Systems": [
+                "Introduction",
+                "Retrieval-Augmented Generation (RAG) has become a standard architectural pattern..."
+            ],
+            "A System for Comprehensive Assessment of RAG Frameworks": [
+                "Retrieval Augmented Generation (RAG) has emerged as a standard paradigm..."
+            ],
+            "Can LLMs Be Trusted for Evaluating RAG Systems? A Survey of Methods and Datasets": [
+                "Retrieval-Augmented Generation (RAG) has advanced significantly in recent years."
+            ]
+        }
+    },
+    {
+        "reason": "RAG系统的核心架构是评估的前提，必须先厘清其组成模块才能展开评估维度分析。",
+        "task": "## 2 RAG系统架构解析",
+        "prompt": "**【子任务的深层解读】** 本节是评估体系构建的认知基础，需从技术流程角度拆解RAG系统的运行机制。重点在于揭示其多阶段、多组件的内在结构（如预检索、检索、后检索、生成等），并强调各阶段对最终输出质量的影响路径。此分析将为后续评估指标的设计提供结构支撑。\n\n**【需要完成的内容】** 描述RAG的基本工作流：查询输入 → 文档检索 → 上下文注入 → 语言生成；引入XRAG提出的四阶段模型（pre-retrieval, retrieval, post-retrieval, generation）作为分析框架；说明每个阶段的关键功能与潜在失败点（如噪声干扰、答案缺失、推理错误等）；结合SCARF和RAGXplain中的模块化设计思想，体现架构的可分解性。\n\n**【在整个全任务中的定位】** 承接引言中的问题陈述，转入技术层面的结构剖析，为第三章‘评估维度划分’提供直接依据，形成‘结构→评估’的逻辑链条。\n\n**【规范的markdown格式标题（含编号）说明】** 使用‘## 2 RAG系统架构解析’作为一级标题，子标题应使用动宾结构，如‘2.1 拆解RAG的四阶段流程’‘2.2 分析各组件的功能与交互’，确保层级清晰且从属关系明确。",
+        "content_index": {
+            "XRAG: eXamining the Core -- Benchmarking Foundational Components in Advanced Retrieval-Augmented Generation": [
+                "Introduction",
+                "Basic & Advanced RAG Components",
+                "Systematic Diagnostics of RAG Failures"
+            ],
+            "A System for Comprehensive Assessment of RAG Frameworks": [
+                "Framework Architecture",
+                "SCARF workflow"
+            ],
+            "RAGXplain: From Explainable Evaluation to Actionable Guidance of RAG Pipelines": [
+                "RAG Evaluation Frameworks",
+                "Metric Calculation"
+            ]
+        }
+    },
+    {
+        "reason": "评估维度需覆盖RAG系统的全生命周期，包括性能、可解释性、实用性等多个层面，构成系统性评价的核心。",
+        "task": "## 3 RAG评估维度构建",
+        "prompt": "**【子任务的深层解读】** 本节是综述的核心分析层，旨在建立一个多维、立体的评估坐标系。需整合多篇文献中提出的评估目标（如TRACe框架、REALM-Bench的动态适应能力、MEMERAG的文化敏感性），提炼出共通且互补的评估维度。强调从‘单一指标打分’向‘多维综合评判’的范式转变。\n\n**【需要完成的内容】** 提出四大主维度：(1) 功能性评估（准确性、相关性、事实一致性）；(2) 可解释性评估（决策透明度、归因能力）；(3) 实用性评估（响应效率、部署兼容性、用户信任度）；(4) 适应性评估（跨语言能力、多场景泛化、抗干扰能力）。每一维度需引用对应文献支持（如RAGBench的功能性指标、RAGXplain的可解释性叙事、MEMERAG的多语言适配）。\n\n**【在整个全任务中的定位】** 作为承上启下的枢纽章节，既基于第二章的架构分析推导出评估维度，又为第四章的具体方法提供分类依据，实现‘结构→维度→方法’的递进逻辑。\n\n**【规范的markdown格式标题（含编号）说明】** 使用‘## 3 RAG评估维度构建’为主标题，子标题采用动宾结构，如‘3.1 定义功能性评估指标’‘3.2 构建可解释性评估体系’，确保编号连续、逻辑嵌套。",
+        "content_index": {
+            "RAGBench: Explainable Benchmark for Retrieval-Augmented Generation Systems": [
+                "TRACe Evaluation Framework",
+                "Evaluation"
+            ],
+            "RAGXplain: From Explainable Evaluation to Actionable Guidance of RAG Pipelines": [
+                "Explainable AI Metrics",
+                "Insight Generation",
+                "Action Item Recommendation"
+            ],
+            "MEMERAG: A Multilingual End-to-End Meta-Evaluation Benchmark for Retrieval Augmented Generation": [
+                "Dataset Applications",
+                "Experimental Results",
+                "Automatic evaluation of retrieval augmented generation (RAG) systems relies on fine-grained dimensions like faithfulness and relevance..."
+            ],
+            "REALM-Bench: A Real-World Planning Benchmark for LLMs and Multi-Agent Systems": [
+                "Benchmark Structure",
+                "Evaluation Metrics",
+                "dynamic environmental disruptions"
+            ]
+        }
+    },
+    {
+        "reason": "不同评估方法对应不同维度，需系统梳理自动化、人工、混合等策略的适用场景与优劣对比。",
+        "task": "## 4 RAG评估方法分类与比较",
+        "prompt": "**【子任务的深层解读】** 本节聚焦于‘如何做评估’的方法论层面，需对现有技术路径进行系统归类。重点区分基于LLM的自动评估（LLM-as-a-judge）、传统嵌入模型评估、人类标注评估及其混合模式，并分析其在不同评估维度上的有效性与局限性。特别关注RAGBench中LLM与微调模型的对比实验结果。\n\n**【需要完成的内容】** 将评估方法分为三类：(1) 自动化方法（包括经典指标如BLEU/ROUGE、嵌入相似度、LLM打分）；(2) 人工评估（专家标注、用户反馈）；(3) 混合评估（人机协同、LLM辅助标注）。每类需说明原理、代表性工具（如DeBERTa、GPT Labeling Prompt）、适用维度及误差来源。引用RAGBench中‘LLM-based方法难以匹敌微调模型’的发现作为批判性讨论点。\n\n**【在整个全任务中的定位】** 在前一章‘评估什么’的基础上回答‘怎么评’，为第五章‘评估框架整合’提供方法库支持，形成‘维度→方法→框架’的闭环。\n\n**【规范的markdown格式标题（含编号）说明】** 使用‘## 4 RAG评估方法分类与比较’为主标题，子标题如‘4.1 归纳自动化评估技术路径’‘4.2 对比人工与自动评估的信效度’，保持动宾结构与层级一致性。",
+        "content_index": {
+            "Can LLMs Be Trusted for Evaluating RAG Systems? A Survey of Methods and Datasets": [
+                "Human Evaluators",
+                "Classical and Embedding-Based Approaches",
+                "LLM as a Judge"
+            ],
+            "RAGBench: Explainable Benchmark for Retrieval-Augmented Generation Systems": [
+                "LLM Judge",
+                "Fine-tuned Judge",
+                "Annotation Alignment with Human Judgements"
+            ],
+            "Evaluating LLM-based Agents for Multi-Turn Conversations: A Survey": [
+                "3.1 Evaluation Data",
+                "3.2 Evaluation Metrics",
+                "hybrid strategies that combine human assessments with quantitative measures"
+            ]
+        }
+    },
+    {
+        "reason": "系统性综述需最终整合为可操作的评估框架，体现理论到实践的转化能力。",
+        "task": "## 5 面向实践的RAG评估框架整合",
+        "prompt": "**【子任务的深层解读】** 本节是综述的集成性输出，旨在提出一个融合多维度、多方法的综合性评估框架。需借鉴RAGXplain的‘从评估到行动建议’理念、SCARF的模块化黑箱测试架构、TRACe的可解释指标体系，构建一个既全面又具操作性的评估流程。强调框架的可扩展性与行业适用性。\n\n**【需要完成的内容】** 设计一个五步评估流程：(1) 明确应用场景与评估目标；(2) 选择适配的评估维度组合；(3) 配置评估方法（自动化+人工）；(4) 执行端到端测试并生成解释性报告；(5) 输出优化建议（如RAGXplain的Action Item Recommendation）。引用SCARF的REST API接口设计说明工程可行性，引用RAGBench的100k标注数据集支持基准测试。\n\n**【在整个全任务中的定位】** 作为综述的总结与升华，将前四章的分析成果整合为一个完整解决方案，回应引言中提出的‘缺乏统一评估标准’问题，实现从‘问题→分析→框架’的完整逻辑闭环。\n\n**【规范的markdown格式标题（含编号）说明】** 使用‘## 5 面向实践的RAG评估框架整合’为主标题，子标题如‘5.1 整合多维度评估指标体系’‘5.2 构建可解释的评估反馈机制’，确保编号连续、结构完整。",
+        "content_index": {
+            "RAGXplain: From Explainable Evaluation to Actionable Guidance of RAG Pipelines": [
+                "RAGXplain Framework",
+                "Insight Generation",
+                "Action Item Recommendation"
+            ],
+            "A System for Comprehensive Assessment of RAG Frameworks": [
+                "Framework Architecture",
+                "Scenarios",
+                "Writing an adapter Module for a Custom RAG Framework"
+            ],
+            "RAGBench: Explainable Benchmark for Retrieval-Augmented Generation Systems": [
+                "TRACe Evaluation Framework",
+                "RAGBench Construction",
+                "RAG Case Study"
+            ]
+        }
+    },
+    {
+        "reason": "任何评估体系都面临挑战与演进需求，需前瞻性地指出未来发展方向以增强综述深度。",
+        "task": "## 6 挑战与未来展望",
+        "prompt": "**【子任务的深层解读】** 本节承担批判性反思与趋势预测功能，需识别当前RAG评估中的根本性难题（如LLM打分的偏见、跨语言评估的文化偏差、动态环境下的适应性不足），并基于文献提出可能的突破路径。强调从‘静态打分’向‘动态优化’的范式迁移。\n\n**【需要完成的内容】** 总结三大挑战：(1) 自动化评估的信任危机（LLM-as-a-judge的不可靠性）；(2) 多语言与文化差异带来的评估偏差（MEMERAG指出的翻译数据局限）；(3) 复杂推理与多代理协调场景下的评估空白（REALM-Bench揭示的动态规划挑战）。未来方向包括：发展专用评估模型、构建原生多语言基准、引入因果推理验证机制、推动人机协同评估标准化。\n\n**【在整个全任务中的定位】** 作为综述的收尾章节，既总结前文局限，又拓展研究边界，提升综述的学术引领性与政策参考价值。\n\n**【规范的markdown格式标题（含编号）说明】** 使用‘## 6 挑战与未来展望’为主标题，子标题如‘6.1 识别自动化评估的信任瓶颈’‘6.2 探索多语言评估的文化适配路径’，保持编号与格式统一。",
+        "content_index": {
+            "MEMERAG: A Multilingual End-to-End Meta-Evaluation Benchmark for Retrieval Augmented Generation": [
+                "Limitations",
+                "However, existing benchmarks predominantly focus on English or use translated data, which fails to capture cultural nuances."
+            ],
+            "Can LLMs Be Trusted for Evaluating RAG Systems? A Survey of Methods and Datasets": [
+                "the bias, inaccuracy, and lack of interpretability of the LLM-as-a-judge method"
+            ],
+            "REALM-Bench: A Real-World Planning Benchmark for LLMs and Multi-Agent Systems": [
+                "dynamic environmental disruptions requiring real-time adaptation"
+            ],
+            "Automatic Evaluation Metrics for Document-level Translation: Overview, Challenges and Trends": [
+                "the bias, inaccuracy, and lack of interpretability of the LLM-as-a-judge method"
+            ]
+        }
+    }
+]

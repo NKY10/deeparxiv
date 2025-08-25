@@ -20,9 +20,7 @@ venv/
 .arxivCache/
 !/.arxivCache/.gitkeep
 
-taskDir/*
-!/taskDir/.gitkeep
-!/taskDir/如何评估一个RAG系统20250825201008/**
+# Track all taskDir contents
 
 arxivDB/
 !/arxivDB/.gitkeep
