@@ -25,6 +25,10 @@ START
 - Saver 导出 Markdown：agents/saver.py
 - 图编排：mgraph/graph.py；状态定义：mgraph/state.py
 
+## 构建自己的数据库
+https://github.com/NKY10/Local-AI-Arxiv.git
+
+
 ## 快速开始
 1) 环境要求
 - Python 3.10+
